@@ -1,0 +1,42 @@
+:root {
+  --ink: #111111;
+  --ink-2: #1c1c1c;
+  --paper: #ffffff;
+  --mist: #f4f4f2;
+  --line: #e6e6e3;
+  --line-dark: rgba(255, 255, 255, 0.16);
+  --grey: #6f6f6f;
+  --grey-light: rgba(255, 255, 255, 0.62);
+
+  --f-serif: 'Playfair Display', Georgia, serif;
+  --f-accent: 'Playfair Display', Georgia, serif;
+  --f-body: 'Manrope', system-ui, sans-serif;
+  --f-head: 'Playfair Display', Georgia, serif;
+  color-scheme: light;
+}
+
+html[lang='fa'] {
+  --f-accent: 'Noto Nastaliq Urdu', 'Vazirmatn', serif;
+  --f-body: 'Vazirmatn', system-ui, sans-serif;
+  --f-head: 'Vazirmatn', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; padding: 0; }
+h1, h2, h3, h4, p, figure, ul, ol, blockquote { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+::selection { background: var(--ink); color: var(--paper); }
