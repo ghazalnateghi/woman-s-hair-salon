@@ -147,7 +147,8 @@ export function Footer() {
       </div>
       <div className="foot__giant" aria-hidden><Wordmark /><Wordmark /></div>
       <div className="wrap foot__bar">
-        <small>{f.rights} · {lang === 'fa' ? 'توسعه توسط تیم' : 'Developed by'} <b>Flowbit</b>{lang === 'fa' ? '' : ' team'}</small>
+        <small>{f.rights}</small>
+        <p className="foot__credit">{lang === 'fa' ? 'طراحی و توسعه :' : 'Design & development:'} <a className="ftr-credit" href="https://flowbits.co" target="_blank" rel="noopener" dir="ltr">flowbits.co</a></p>
         <a href="#footer">{f.privacy}</a>
         <a href="#footer">{f.terms}</a>
         <a href="#/" className="totop" aria-label="top"><ArrowUp /></a>
