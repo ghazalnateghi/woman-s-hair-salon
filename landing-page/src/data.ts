@@ -145,6 +145,8 @@ export const contact = {
   phone: t('۰۲۱-۱۲۳۴ ۵۶۷۸', '+98 21 1234 5678'),
   tel: '+982112345678',
   insta: '@velora.beauty',
+  lat: 35.7872,
+  lng: 51.3745,
   hours: [
     [t('شنبه تا چهارشنبه', 'Sat – Wed'), t('۱۰ — ۲۰', '10 — 20')],
     [t('پنجشنبه', 'Thursday'), t('۱۰ — ۱۸', '10 — 18')],
@@ -225,3 +227,51 @@ export const ui = {
 }
 
 export type UI = (typeof ui)['fa']
+
+/* ─────────── extra landing sections ─────────── */
+export const looks = [
+  { title: t('بالیاژ کاراملی', 'Caramel balayage'), before: 's-hair', after: 's-color' },
+  { title: t('کراتین و احیا', 'Keratin & repair'), before: 's-brush', after: 's-keratin' },
+  { title: t('پاکسازی پوست', 'Skin cleansing'), before: 's-mask', after: 's-facial2' },
+]
+
+export const team = [
+  { img: 'portrait', name: t('مهسا کرمی', 'Mahsa Karami'), role: t('مدیر هنری · رنگ و لایت', 'Creative director · Color') },
+  { img: 's-makeup', name: t('الهام صادقی', 'Elham Sadeghi'), role: t('میکاپ و شینیون', 'Makeup & updo') },
+  { img: 's-nails2', name: t('پریسا نوری', 'Parisa Nouri'), role: t('ناخن و ژلیش', 'Nails & gel') },
+  { img: 's-facial', name: t('سمانه جعفری', 'Samaneh Jafari'), role: t('متخصص پوست', 'Skin specialist') },
+]
+
+export const priceMenu = [
+  { title: t('مو', 'Hair'), items: [
+    [t('کوتاهی و براشینگ', 'Cut & blow-dry'), 600_000], [t('رنگ ریشه', 'Root color'), 1_800_000],
+    [t('بالیاژ / لایت', 'Balayage / highlights'), 4_500_000], [t('کراتین', 'Keratin'), 2_500_000],
+  ] as [T, number][] },
+  { title: t('پوست و ناخن', 'Skin & nails'), items: [
+    [t('فیشیال پاکسازی', 'Cleansing facial'), 950_000], [t('هیدرافیشیال', 'HydraFacial'), 1_600_000],
+    [t('ژلیش', 'Gel polish'), 450_000], [t('کاشت ناخن', 'Nail extension'), 1_100_000],
+  ] as [T, number][] },
+  { title: t('میکاپ و اسپا', 'Makeup & spa'), items: [
+    [t('میکاپ مهمانی', 'Party makeup'), 1_500_000], [t('میکاپ و شینیون عروس', 'Bridal makeup & updo'), 3_200_000],
+    [t('ماساژ ریلکسیشن', 'Relaxation massage'), 1_200_000], [t('سنگ‌درمانی', 'Hot stone therapy'), 1_500_000],
+  ] as [T, number][] },
+]
+
+export const insta = ['s-color', 's-nails', 's-makeup', 's-facial', 's-keratin', 's-massage', 's-hair', 's-nails2']
+
+export const ex = {
+  fa: {
+    ba: { t: 'قبل', em: 'و بعد', hint: 'برای مقایسه بکشید', before: 'قبل', after: 'بعد' },
+    team: { t: 'تیم', em: 'ولورا', text: 'متخصصان دارای مدرک فنی‌وحرفه‌ای که هر روز برای زیبایی شما وقت می‌گذارند.', book: 'رزرو با این متخصص' },
+    price: { t: 'منوی', em: 'خدمات و قیمت', note: 'قیمت نهایی پس از مشاوره‌ی رایگان و بر اساس طول و حجم مو اعلام می‌شود.' },
+    book: { t: 'رزرو', em: 'نوبت', name: 'نام و نام خانوادگی', phone: 'شماره موبایل', service: 'خدمت مورد نظر', date: 'تاریخ دلخواه', send: 'ثبت درخواست', thanks: 'درخواست شما ثبت شد؛ همکاران ما به‌زودی تماس می‌گیرند.', hours: 'ساعات کاری', address: 'آدرس', google: 'گوگل مپ', neshan: 'نشان', balad: 'بلد', or: 'یا', call: 'رزرو تلفنی', callText: 'همه‌روزه ۱۰ تا ۲۰ پاسخ‌گو هستیم' },
+    insta: { t: 'ما در', em: 'اینستاگرام', follow: 'دنبال کنید' },
+  },
+  en: {
+    ba: { t: 'Before', em: '& after', hint: 'Drag to compare', before: 'Before', after: 'After' },
+    team: { t: 'Meet the', em: 'team', text: 'Certified specialists who give their full attention to your beauty, every day.', book: 'Book with her' },
+    price: { t: 'Services', em: '& pricing', note: 'Final price is confirmed after a free consultation, based on hair length and volume.' },
+    book: { t: 'Book an', em: 'appointment', name: 'Full name', phone: 'Mobile number', service: 'Service', date: 'Preferred date', send: 'Request booking', thanks: 'Request received - we will call you shortly.', hours: 'Opening hours', address: 'Address', google: 'Google Maps', neshan: 'Neshan', balad: 'Balad', or: 'or', call: 'Book by phone', callText: 'We answer daily from 10 to 20' },
+    insta: { t: 'Find us on', em: 'Instagram', follow: 'Follow' },
+  },
+}

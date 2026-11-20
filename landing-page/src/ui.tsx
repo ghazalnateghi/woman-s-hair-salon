@@ -112,7 +112,7 @@ export function Nav() {
 
 /* ───────── footer (black with white dots) ───────── */
 export function Footer() {
-  const { u, L } = useStore()
+  const { u, L, lang } = useStore()
   const f = u.foot
   return (
     <footer className="foot" id="footer">
@@ -137,16 +137,17 @@ export function Footer() {
           </div>
           <div>
             <h4>{f.cols[2]}</h4>
-            {[Insta, Telegram, WhatsApp].map((I, i) => (
-              <a key={i} href="#footer" className="foot__soc"><I />{f.social[i]}</a>
-            ))}
-            <span className="foot__handle" dir="ltr">{contact.insta}</span>
+            <div className="foot__icons">
+              {[Insta, Telegram, WhatsApp].map((I, i) => (
+                <a key={i} href="#footer" className="foot__soc" aria-label={f.social[i]} title={f.social[i]}><I /></a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
       <div className="foot__giant" aria-hidden><Wordmark /><Wordmark /></div>
       <div className="wrap foot__bar">
-        <small>{f.rights}</small>
+        <small>{f.rights} · {lang === 'fa' ? 'توسعه توسط تیم' : 'Developed by'} <b>Flowbit</b>{lang === 'fa' ? '' : ' team'}</small>
         <a href="#footer">{f.privacy}</a>
         <a href="#footer">{f.terms}</a>
         <a href="#/" className="totop" aria-label="top"><ArrowUp /></a>
