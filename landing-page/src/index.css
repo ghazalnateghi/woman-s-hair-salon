@@ -16,7 +16,7 @@
 }
 
 html[lang='fa'] {
-  --f-accent: 'Noto Nastaliq Urdu', 'Vazirmatn', serif;
+  --f-accent: 'Vazirmatn', system-ui, sans-serif;
   --f-body: 'Vazirmatn', system-ui, sans-serif;
   --f-head: 'Vazirmatn', system-ui, sans-serif;
 }
